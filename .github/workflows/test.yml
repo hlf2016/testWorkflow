@@ -22,7 +22,7 @@ jobs:
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
-      - name: skipTagInCommitMessage
+      - name: skipTagInCommitMessage 1
         env: 
           SkipTagInCommitMessage: ${{ contains(join(github.event.commits.*.message, ' '), '#skip') }}
         run: echo "$SkipTagInCommitMessage"
