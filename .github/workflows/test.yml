@@ -25,4 +25,4 @@ jobs:
       - name: skipTagInCommitMessage
         env: 
           SkipTagInCommitMessage: ${{ contains(join(github.event.commits.*.message, ' '), '#skip') }}
-        run: echo '$SkipTagInCommitMessage'
+        run: echo "$SkipTagInCommitMessage"
